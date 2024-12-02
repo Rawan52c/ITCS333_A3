@@ -47,6 +47,7 @@ fetch(url)
                         const dataContainer = document.getElementById('data-container');
             dataContainer.appendChild(table);
         } else {
+             // Alert the user if the data or results are not found
                        alert("Something went wrong, Output (data) not found");
         }
     })
