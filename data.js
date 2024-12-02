@@ -52,6 +52,7 @@ fetch(url)
         }
     })
     .catch(error => {
+             // Log the error to the console and alert the user
                console.error("Error fetching data:", error);
         alert("An error occurred while fetching the data.");
     });
