@@ -8,10 +8,11 @@ fetch(url)
         // Check if the data exists and contains results
         if (data && data.results) {
             
+             // Create a table element to display the data
             const table = document.createElement('table');
             table.classList.add('table', 'table-bordered'); 
 
-            
+            // Create the table header with column names
             const thead = document.createElement('thead');
             thead.innerHTML = `
                 <tr>
@@ -25,7 +26,10 @@ fetch(url)
             `;
             table.appendChild(thead);
            
+            // Create the table body to hold the data rows
             const tbody = document.createElement('tbody');
+
+            // Loop through each record in the data and create a row
             data.results.forEach(student => {
                 const row = document.createElement('tr');
                 row.innerHTML = `
@@ -39,7 +43,7 @@ fetch(url)
                 tbody.appendChild(row);
             });
             table.appendChild(tbody);
-
+            // Find the container in the DOM and append the constructed table to it
                         const dataContainer = document.getElementById('data-container');
             dataContainer.appendChild(table);
         } else {
