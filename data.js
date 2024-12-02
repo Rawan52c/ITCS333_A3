@@ -5,6 +5,7 @@ const url = "https://data.gov.bh/api/explore/v2.1/catalog/datasets/01-statistics
 fetch(url)
     .then(response => response.json())
     .then(data => {
+        // Check if the data exists and contains results
         if (data && data.results) {
             
             const table = document.createElement('table');
