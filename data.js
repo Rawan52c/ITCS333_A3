@@ -1,20 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
            
             const tbody = document.createElement('tbody');
             data.results.forEach(student => {
